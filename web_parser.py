@@ -1,39 +1,3 @@
-"""
-Your task is to write a Python program to do the following:
-
-  1) Access the first page of results for health inspection information from the Napa County health department website.
-
-  2) Access each inspection of each facility on that page and collect the following information:
-     - Facility name - second page
-     - Street address - second page
-     - City - second page
-     - State - second page
-     - ZIP code - second page
-     - Inspection date - second page
-     - Inspection type - third page
-     - Inspection grade - second page
-     - Item number and description for each out-of-compliance violation - third page
-
-     * For example, violation item number 6 has the description "Adequate handwashing facilities supplied & accessible"
-
-  3) Create a JSON structure to store the collected information, and write that JSON structure to disk.
-
-  4) Print the collected information to the console in an easy-to-understand format.
-
-  5) [optional bonus task] Create a SQL schema and store the collected information in it.
-
-Some starter code has been provided, but you are welcome to organize your code in the manner that you prefer.
-
-We encourage you to use one of the following libraries to process the reports:
-
-  * LXML (https://pypi.org/project/lxml/)
-  * BeautifulSoup (https://pypi.org/project/beautifulsoup4/)
-
-"""
-''' A schema is a collection of database objects associated with a particular database username '''
-''' To put it in a more readable format, we can print separate the inspection information based on its
-facility, which means we only print all the information for each facility (name, street, zip, city) only once
-rather than for each inspection '''
 import json
 import requests
 from bs4 import BeautifulSoup
